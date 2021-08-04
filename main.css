@@ -7,6 +7,21 @@
 
 #second {
     width: 100px;
+    height: 100px;
     background: red;
+    margin: 50px;
+}
+
+#pink {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    margin: 50px;
+}
+
+#green {
+    width: 100px;
+    height: 100px;
+    background: green;
     margin: 50px;
 }
