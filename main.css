@@ -25,3 +25,10 @@
     background: green;
     margin: 50px;
 }
+
+#black {
+    width: 100px;
+    height: 100px;
+    background: black;
+    margin: 50px;
+}
