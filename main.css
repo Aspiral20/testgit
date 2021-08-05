@@ -12,6 +12,13 @@
     margin: 50px;
 }
 
+#block {
+    width: 100px;
+    height: 100px;
+    background: black;
+    margin: 50px;
+}
+
 #pink {
     width: 100px;
     height: 100px;
@@ -26,9 +33,9 @@
     margin: 50px;
 }
 
-#black {
+#blue {
     width: 100px;
     height: 100px;
-    background: black;
+    background: blue;
     margin: 50px;
 }
