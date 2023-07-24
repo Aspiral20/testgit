@@ -79,3 +79,58 @@ console.log(cachDec(1,5))
 //     add: [ 4 ]
 // }
 
+//========================================= Generate CSV task =========================================//
+function genCSV (arr) {
+    const cols = [];
+    let genCols = "";
+    let genRows = "";
+    
+    arr.forEach(item => {
+        const itemFields = Object.entries(item)
+        itemFields.forEach((field, index) => {
+            const key = field[0]
+            const value = field[1]
+            
+            if(!cols.includes(key)) {
+                cols.push(key)
+            }
+            
+            if(index + 1 === itemFields.length) {
+                genRows += value + "\n"
+            } else if(index + 1 < itemFields.length) {
+                genRows += value + ";"
+            } else {
+                genRows += value
+            }
+            
+        })
+    })
+    
+    cols.forEach((col, index) => {
+        if(index + 1 === cols.length) {
+                genCols += col + "\n"
+            } else if(index + 1 < cols.length) {
+                genCols += col + ";"
+            } else {
+                genCols += col
+            }
+    })
+    
+    return genCols + genRows
+}
+
+const dataRows = [
+    {id: 1, name: 'Hamb', surName: 'Ham'},
+    {id: 2, name: 'Alex', surName: 'Un'},
+    {id: 3, name: 'Alex1', surName: 'Un1'},
+]
+
+console.log(genCSV(dataRows))
+
+
+// Output
+// id;name;surName
+// 1;Hamb;Ham
+// 2;Alex;Un
+// 3;Alex1;Un1
+
